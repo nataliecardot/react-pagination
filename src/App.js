@@ -24,6 +24,15 @@ const App = () => {
     fetchPosts();
   }, []);
 
+  // Get current page's posts
+
+  // For first page, would be 1 x 10 = 10
+  const indexOfLastPost = currentPage * postsPerPage;
+  // For first page, would be 10 - 10 = 0
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  // Slice method returns new array, selecting elements starting at the given start argument, up until (but excluding) the given end argument
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
   console.log(posts);
   return (
     <div className="container mt-5">
