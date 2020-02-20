@@ -37,7 +37,6 @@ const App = () => {
   // Slice method returns new array, selecting elements starting at the given start argument, up until (but excluding) the given end argument
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
-  console.log(posts);
   return (
     <div className="container mt-4 mb-5">
       <h1 className="text-primary mb-3">My Blog</h1>
